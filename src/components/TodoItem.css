@@ -4,8 +4,10 @@
   gap: 20px;
   padding: 20px;
   border-bottom: 1px solid rgb(240, 240, 240);
+  border-radius: 5px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease;
+  background: var(--card);
 }
 
 .TodoItem:hover{
@@ -18,6 +20,13 @@
   color: #9ca3af;
 }
 
+.TodoItem input:checked{
+  accent-color: var(--primary);
+}
+.TodoItem input:checked + .content{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
 .TodoItem .content{
   flex: 1;
 }
@@ -38,4 +47,5 @@
 
 .TodoItem button:hover{
   background-color: var(--red);
+  color: white;
 }
