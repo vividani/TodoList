@@ -63,9 +63,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <Editor onCreate={onCreate}/>
-      <List todo={todo} onDelete={onDelete} onUpdate={onUpdate}/>
+      <div className="todo-container">
+        <Header />
+        <Editor onCreate={onCreate}/>
+        <List todo={todo} onDelete={onDelete} onUpdate={onUpdate}/>
+      </div>
     </div>
   )
 }

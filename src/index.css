@@ -2,6 +2,7 @@ body{
   font-family: 'Inter', 'Noto Sans KR', sans-serif;
   background: var(--bg);
   color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 :root{
@@ -11,12 +12,12 @@ body{
   --bg: #f9fafb;
   --card: #ffffff;
   --text: #111827;
+  --shadow: rgba(99, 102, 241, 0.2);
 }
 
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg: #111827;
-    --card: #1f2937;
-    --text: #f9fafb;
-  }
+:root[data-theme='dark']{
+  --bg: #111827;
+  --card: #1f2937;
+  --text: #f9fafb;
+  --shadow: rgba(199, 200, 248, 0.2);
 }
